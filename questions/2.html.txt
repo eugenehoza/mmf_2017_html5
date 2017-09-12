@@ -1,0 +1,70 @@
+﻿Расшифровка HTML
+Текущая версия HTML
+Комментарий в HTML
+Тэги, появившиеся в HTML 5 (минимум 5)
+Тэги, устаревшие в HTML 5 (минимум 5)
+Атрибуты, появившиеся в HTML 5 (минимум 2)
+<a>
+<area>
+<article>
+<aside>
+<b>
+<blockquote>
+<body>
+<br>
+<button>
+<canvas>
+<col>
+<colgroup>
+<datalist>
+<dialog>
+<em>
+<footer>
+<h6>
+<hr>
+<html>
+<i>
+<iframe>
+<img>
+<input>
+<keygen>
+<label>
+<li>
+<link>
+<main>
+<map>
+<mark>
+<meta>
+<meter>
+<nav>
+<ol>
+<p>
+<pre>
+<progress>
+<q>
+<script>
+<select>
+<source>
+<span>
+<strike>
+<strong>
+<style>
+<sub>
+<sup>
+<table>
+<tbody>
+<td>
+<textarea>
+<tfoot>
+<th>
+<thead>
+<time>
+<title>
+<tr>
+<ul>
+<video>
+Атрибут href
+Атрибут id
+Атрибут style
+Атрибут class
+Атрибут hidden
