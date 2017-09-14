@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>HomeWork</title>
+
+
+    <script type="text/javascript">
+      function switchHidden() {
+        if(document.getElementById("HIDDENTOPSECRET").hidden){
+          document.getElementById("HIDDENTOPSECRET").hidden = false;
+        }
+        else{
+          document.getElementById("HIDDENTOPSECRET").hidden = true;
+        }
+      }
+    </script>
+
+    <style>
+      aside {
+        background: #94FF9B;
+        border-radius: 5px;
+        padding: 10px;
+        width: 200px;
+        float: right;
+      }
+      article {
+        margin-right: 240px;
+        display: block;
+      }
+      footer {
+        background: #94FF9B;
+        border-radius: 5px;
+        padding: 10px;
+        float: right;
+        margin-bottom: 10px;
+      }
+      body{
+        color: #3D2B1F;
+      }
+
+    </style>
+
+
+  </head>
+  <body bgcolor="#ebfcf8">
+
+    <H2>
+      Old tags:
+    </H2>
+    <br>
+    <b>Table</b>
+    <table>
+      <tr>
+        <td>1</td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>4</td>
+      </tr>
+    </table>
+    <br>
+    <b>Button:</b>
+    <br>
+
+
+
+    <button type="button" name="button1" onclick="switchHidden()">i'm invisible</button>
+    <br>
+    <div id = "HIDDENTOPSECRET" hidden="true">
+    <b>div,img,script</b>
+    <br>
+    <img src="img.png">
+    </div>
+
+    <br>
+
+    <H2>
+      And let's see new tags:
+    </H2>
+
+    <header>
+      <p><b>Header</b> here!</p>
+      <p>And also <b>nav</b>:</p>
+      <nav><a href="http://www.google.com">Google</a> | <a href="http://www.yandex.ru">Yandex</a> |
+       <a href="http://www.Yahoo.com">Yahoo</a> | <a href="https://www.bing.com/">Bing</a></nav>
+    </header>
+    <br>
+    <aside>
+      <p><b>Aside</b></p>
+      <p>Metallica или Iron maiden?</p>
+      <p>Иллидан опять все сломал</p>
+      <p>Чья палка больше?</p>
+    </aside>
+    <b>Article</b>
+    <article>
+      Мэр австрийского городка Fucking призвал британских туристов перестать воровать их дорожные знаки. Зигфрид Хауппл сказал, что этот маленький городок всегда привлекал туристов из Зальцбурга, желающих сфотографироваться на фоне знаков. Терпение администрации города лопнуло, когда денег на установку новых знаков перестало хватать. В прошлом году был проведен референдум по вопросу переименования городка, но было решено оставить все как есть. В конце концов, Факингу уже 800 лет. Возможно его основал мистер Фак или семья Фак, а окончание ing означает "поселение". Местные жители и не подозревали о значении этого слова в английском языке до тех пор пока в 1945 году городок не наводнили американские и британские солдаты. Мэр Хауппл утверждает, что они знают о значении этого слова, но для них Факинг это просто Факинг и никакой двусмысленности. Франц Дурнштайнер, эксперт по вопросам странных названий австрийских городов, заявляет, что жители Факинга достаточно консервативные люди. Большинство из них знают английский, и когда их просят сказать откуда они родом, стесняются произносить название городка.
+    </article>
+
+    <br>
+
+
+    <footer>
+      <p><b>Footer</b>: this page was made by the noble knight of C++(cool, isn't it?)</p>
+    </footer>
+  </body>
+</html>
