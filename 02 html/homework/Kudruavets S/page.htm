@@ -4,25 +4,48 @@
     <meta charset="utf-8">
     <title>HomeWork</title>
 
-
+    <!--Простенький скрипт -->
     <script type="text/javascript">
-      function switchHidden() {
-        if(document.getElementById("HIDDENTOPSECRET").hidden){
-          document.getElementById("HIDDENTOPSECRET").hidden = false;
+      //Функция для рисования прямоугольника
+      function showCat() {
+        var canvas = document.getElementById("canvas1");
+        var context = canvas.getContext("2d");
+        var cat = new Image();
+        cat.src = "img.jpg";
+        cat.onload = function() {
+          context.drawImage(cat, 0, 0);
+          if(document.getElementById("button1").value == "Show invisible") {
+            context.strokeRect(113, 127, 128, 58);
+            document.getElementById("button1").value = "Hide invisible";
+          }
+          else if(document.getElementById("button1").value == "Hide invisible") {
+            document.getElementById("button1").value = "Show invisible";
+          }
+
+        };
+      }
+
+      //Функция для открытия/закрытия дива по id
+      function switchHide(id){
+        if(document.getElementById(id).hidden){
+          document.getElementById(id).hidden = false;
         }
-        else{
-          document.getElementById("HIDDENTOPSECRET").hidden = true;
+        else {
+          document.getElementById(id).hidden = true;
         }
       }
     </script>
 
+
+
+
+    <!--Немного css неповредит :D -->
     <style>
       aside {
         background: #94FF9B;
         border-radius: 5px;
         padding: 10px;
         width: 200px;
-        float: right;
       }
       article {
         margin-right: 240px;
@@ -32,24 +55,28 @@
         background: #94FF9B;
         border-radius: 5px;
         padding: 10px;
-        float: right;
+        float: left;
         margin-bottom: 10px;
       }
       body{
         color: #3D2B1F;
+        background-color: #ebfcf8;
       }
 
     </style>
 
 
   </head>
-  <body bgcolor="#ebfcf8">
+  <body>
 
     <H2>
       Old tags:
     </H2>
     <br>
-    <b>Table</b>
+
+    <!--Table and also button, div, br.-->
+    <button type="button" title="Создает таблицу." onclick="switchHide('table')">Table+tr+td</button>
+    <div id="table" hidden="true">
     <table>
       <tr>
         <td>1</td>
@@ -60,49 +87,113 @@
         <td>4</td>
       </tr>
     </table>
-    <br>
-    <b>Button:</b>
-    <br>
-
-
-
-    <button type="button" name="button1" onclick="switchHidden()">i'm invisible</button>
-    <br>
-    <div id = "HIDDENTOPSECRET" hidden="true">
-    <b>div,img,script</b>
-    <br>
-    <img src="img.png">
     </div>
-
     <br>
+
+    <!--Canvas and also script -->
+    <button type="button" title="Создает область, в которой при помощи JS можно работать с графикой." onclick="switchHide('canvas')">Canvas</button>
+    <div id="canvas" hidden="true">
+    <canvas id="canvas1" width="360" height="500"></canvas>
+    </div>
+    <br>
+    <!--Рисуем в канвасе -->
+    <script type="text/javascript">
+      var canvas = document.getElementById("canvas1");
+      var context = canvas.getContext("2d");
+      var cat = new Image();
+      cat.src = "img.jpg";
+      cat.onload = function() {
+      context.drawImage(cat, 0, 0);
+      };
+    </script>
+
+    <!--Button -->
+    <button type="button" title="создание кнопки; тег служит для описание скриптов; создание блока элементов" onclick="switchHide('button')">Button+script+div</button>
+    <div id="button" hidden="true">
+      <input type="button" name="button1" id="button1" onclick="showCat()" value="Show invisible">
+    </div>
+    <br>
+
+    <!--Textarea -->
+    <button type="button" title="форма для ввода текста с возможностью переноса строки" onclick="switchHide('Textarea')">Textarea</button>
+    <div id="Textarea" hidden="true">
+      <textarea name="name" rows="2" cols="10" placeholder="Sample Text"></textarea>
+    </div>
+    <br>
+
+    <!--Audio -->
+    <button type="button" title="Добавляет, воспроизводит и управляет настройками аудиозаписи на веб-странице." onclick="switchHide('audio')">Audio</button>
+    <div id="audio" hidden="true">
+
+      <i>Ori and the Blind Forest - Game Main Theme</i>
+      <br>
+      <audio controls src="audio.mp3">Очевидно ваш браузер не поддерживает тег audio.</audio>
+
+    </div>
+    <br>
+
+    <!--Cite -->
+    <button type="button" title="помечает текст как цитату или сноску на другой материал" onclick="switchHide('cite')">Cite</button>
+    <div id="cite" hidden="true">
+      <cite>Sample Text</cite>
+    </div>
+    <br>
+
+
+
 
     <H2>
       And let's see new tags:
     </H2>
 
-    <header>
-      <p><b>Header</b> here!</p>
-      <p>And also <b>nav</b>:</p>
+    <!--Header -->
+    <button type="button" title="задает «шапку» сайта или раздела, в которой обычно располагается заголовок." onclick="switchHide('Header')">Header</button>
+    <div id="Header" hidden="true">
+      <header>
+        <b>Header</b> here!
+      </header>
+    </div>
+    <br>
+
+    <!--Nav -->
+    <button type="button" title="задает навигацию по сайту." onclick="switchHide('nav')">Nav</button>
+    <div id="nav" hidden="true">
       <nav><a href="http://www.google.com">Google</a> | <a href="http://www.yandex.ru">Yandex</a> |
        <a href="http://www.Yahoo.com">Yahoo</a> | <a href="https://www.bing.com/">Bing</a></nav>
-    </header>
-    <br>
-    <aside>
-      <p><b>Aside</b></p>
-      <p>Metallica или Iron maiden?</p>
-      <p>Иллидан опять все сломал</p>
-      <p>Чья палка больше?</p>
-    </aside>
-    <b>Article</b>
-    <article>
-      Мэр австрийского городка Fucking призвал британских туристов перестать воровать их дорожные знаки. Зигфрид Хауппл сказал, что этот маленький городок всегда привлекал туристов из Зальцбурга, желающих сфотографироваться на фоне знаков. Терпение администрации города лопнуло, когда денег на установку новых знаков перестало хватать. В прошлом году был проведен референдум по вопросу переименования городка, но было решено оставить все как есть. В конце концов, Факингу уже 800 лет. Возможно его основал мистер Фак или семья Фак, а окончание ing означает "поселение". Местные жители и не подозревали о значении этого слова в английском языке до тех пор пока в 1945 году городок не наводнили американские и британские солдаты. Мэр Хауппл утверждает, что они знают о значении этого слова, но для них Факинг это просто Факинг и никакой двусмысленности. Франц Дурнштайнер, эксперт по вопросам странных названий австрийских городов, заявляет, что жители Факинга достаточно консервативные люди. Большинство из них знают английский, и когда их просят сказать откуда они родом, стесняются произносить название городка.
-    </article>
-
+    </div>
     <br>
 
+    <!--Aside -->
+    <button type="button" title="Определяет блок сбоку от контента для размещения рубрик, ссылок на архив, меток и другой информации." onclick="switchHide('aside')">Aside</button>
+    <div id="aside" hidden="true">
+      <aside>
+        <p><b>Aside</b></p>
+        <p>Metallica или Iron maiden?</p>
+        <p>Иллидан опять все сломал</p>
+        <p>Чья палка больше?</p>
+      </aside>
+    </div>
+    <br>
 
-    <footer>
-      <p><b>Footer</b>: this page was made by the noble knight of C++(cool, isn't it?)</p>
-    </footer>
+    <!--Article -->
+    <button type="button" title="задает содержание сайта вроде новости, статьи, записи блога, форума или др." onclick="switchHide('article')">Article</button>
+    <div id="article" hidden="true">
+      <article>
+        Мэр австрийского городка Fucking призвал британских туристов перестать воровать их дорожные знаки. Зигфрид Хауппл сказал, что этот маленький городок всегда привлекал туристов из Зальцбурга, желающих сфотографироваться на фоне знаков. Терпение администрации города лопнуло, когда денег на установку новых знаков перестало хватать. В прошлом году был проведен референдум по вопросу переименования городка, но было решено оставить все как есть. В конце концов, Факингу уже 800 лет. Возможно его основал мистер Фак или семья Фак, а окончание ing означает "поселение". Местные жители и не подозревали о значении этого слова в английском языке до тех пор пока в 1945 году городок не наводнили американские и британские солдаты. Мэр Хауппл утверждает, что они знают о значении этого слова, но для них Факинг это просто Факинг и никакой двусмысленности. Франц Дурнштайнер, эксперт по вопросам странных названий австрийских городов, заявляет, что жители Факинга достаточно консервативные люди. Большинство из них знают английский, и когда их просят сказать откуда они родом, стесняются произносить название городка.
+      </article>
+      <a href="http://www.newsru.com/world/15aug2005/fking.html">Это не шутка, наверное</a>
+    </div>
+    <br>
+
+    <!--Footer -->
+    <button type="button" title="задаёт «подвал» сайта или раздела, в нём может располагаться имя автора, дата документа, контактная и правовая информация." onclick="switchHide('footer')">Footer</button>
+    <div id="footer" hidden="true">
+      <footer>
+        <p><b>Footer</b>: this page was made by the noble knight of C++(cool, isn't it?)</p>
+      </footer>
+    </div>
+    <br>
+
+
   </body>
 </html>
