@@ -1,0 +1,66 @@
+:root {background: #eeeeee}
+
+[id=selectors], section h1 {
+  background: #FFEFEF;
+  text-align: left;
+}
+
+.btn {
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 14px 28px;
+  margin: 5px 6px;
+}
+
+.btn:hover {border: 4px dashed #00dd00}
+
+.question {background-color: #2196F3;}
+.question:hover {
+  background: #0b7dda;
+  cursor: help;
+}
+
+.green {background-color: #4CAF50;}
+.green:hover {background-color: #46a049;}
+
+.orange {background-color: #ff9800;}
+.orange:hover {background: #e68a00;}
+
+.red {background-color: #f44336;}
+.red:hover {background: #da190b;}
+
+.btn:focus {border: 4px dashed green}
+
+h1, section {
+  background: white;
+  margin: auto;
+  text-align: center;
+  width: 30%;
+  border: 3px solid green;
+  padding: 10px;
+}
+
+section > h1 {
+  border: 3px solid red;
+}
+
+p::first-letter {
+  text-decoration: underline overline;
+  font: italic 1em "Open Sans", sans-serif;
+}
+
+h1 {
+  width: 80%;
+  text-shadow: 5px 5px #669BCC;
+}
+
+p::selection {
+  color: white;
+  background: #f44336;
+}
+
+p::-moz-selection {
+  color: white;
+  background: #f44336;
+}
