@@ -1,0 +1,45 @@
+h1{/*Селектор-тег*/
+  color: blue;
+  font-style: italic;
+  border: 4px double black;
+  padding:10px;
+  box-sizing: border-box;
+  width: 300px;
+}
+#main{/*Селектор-id*/
+  font-family: "Comic Sans ms";
+  background-color: #d46feb;
+}
+.class1{/*Селектор-класс*/
+  background: #c243df;
+  border-radius: 5px;
+  padding: 10px;
+  width: 150px;
+}
+h2:first-letter {/*Селектор-первая буква*/
+  font-family: "Calibri";
+  color: white;
+  font-size: 50px;
+}
+button:hover{/*Селектор-при наведении*/
+  background-color: #e4b9ee;
+}
+button:active{/*Селектор-нажатие*/
+  color: blue;
+}
+
+th, td{/*Селектор-столбцы и строки*/
+  border-bottom: 1px solid #ddd;
+}
+
+tr:nth-child(even){/*Селектор-нечетный подтег*/
+  background-color: #c243df;
+}
+body  b {/*Селектор-потомок*/
+  color: green;
+  text-decoration: underline;
+  font-style: oblique;
+}
+table > tr,td {/*Селектор-подтег и объединение*/
+  font-family: fantasy;
+}
