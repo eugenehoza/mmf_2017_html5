@@ -1,0 +1,53 @@
+/*Тег*/
+body{
+  color: #3D2B1F;
+  background-color: #ebfcf8;
+}
+/*класс*/
+.hidden{
+  background: #94FF9B;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 5px;
+}
+/*ид*/
+#article {
+  font-family:monospace;
+}
+/*объединение*/
+body button{
+  background-color: #4CAF50;
+  border: none;
+  width: 170px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin-left: 10px;
+}
+/*объединение + первая буква*/
+Body h2::first-letter{
+  color: #6f4e37;
+  font-size: 30px;
+}
+/*наведение*/
+button:hover {
+  background-color: #95d097;
+}
+/*активная ссылка*/
+a:link {
+  color: green;
+}
+/*посещенная ссылка*/
+a:visited {
+  color: #003300;
+}
+/*четный член с начала*/
+tr:nth-child(even) {
+  background-color: green;
+}
+/*нечетный член с конца*/
+tr:nth-last-child(odd)
+{
+  background-color: #95d097;
+}
