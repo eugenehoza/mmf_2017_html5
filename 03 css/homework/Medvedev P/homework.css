@@ -1,0 +1,60 @@
+section > h1 {
+  color: #0000FF;
+  background: #00FF00;
+  text-align: center;
+  margin: auto;
+  border: 5px solid green;
+  width: 50%;
+}
+
+.qwe {
+  color: #FF00FF;
+}
+
+td {
+  color: #FFFF00;
+}
+
+[id=tableid]{
+  background: #123456
+}
+
+h2::first-letter {
+  text-decoration: underline;
+}
+
+meter + h2 {
+  border: 5px solid #F00000;
+  background: #FF0000;
+  margin: auto;
+  width: 40%;
+  text-align: center;
+}
+
+* {
+  margin: auto;
+  width: 70%;
+  text-align: center;
+}
+
+section {
+  margin: auto;
+  border: 5px solid #F00000;
+  width: 60%;
+}
+
+section h2 {
+  margin: auto;
+  color: green;
+  width: 30%;
+  text-align: center;
+}
+
+h2::selection {
+  color: white;
+  background: green;
+}
+
+details[open] {
+  border: 5px solid #F00000;
+}
