@@ -1,0 +1,63 @@
+﻿        /* универсальный селектор */
+        * {
+          background-color: #3366CC;
+          color: white;
+          font-size: 24pt;
+        }
+
+        /* селектор тега */
+        h3 {
+          background-color: #ffff00;
+          color: #3366CC;
+        }
+
+        /* класс с указанием тега */
+        aside.foraside {
+          background: #f0f0f0;
+          padding: 10px;
+          width: 30%;
+          float: right;
+          background-color: #f0f0f0;
+          color: black;
+        }
+
+        /* класс без указания тега */
+        .oneclass {
+          background-color: black;
+          color: white;
+        }
+
+        /* идентификатор */
+        #ident {
+          background: #ff0000;
+          padding: 10px;
+          width: 30%;
+          float: left;
+          background-color: #ff0000;
+        }
+
+        /* контекстный селектор */
+        article p {
+          background-color: #00ff00;
+          color: #008000;
+        }
+
+        /* соседний селектор */
+        aside + p {
+          color: yellow;
+        }
+
+        /* дочерний селектор */
+        p > i {
+          color: #00ff00;
+        }
+
+        /* селектор атрибута со значением */
+        article[title="atribute selector"] {
+          color: #00ffff;
+        }
+
+        /* псевдокласс */
+        p:hover { 
+          color: red; 
+        }
