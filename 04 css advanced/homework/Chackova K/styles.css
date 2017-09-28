@@ -1,0 +1,30 @@
+table{
+    border-collapse: collapse;
+    font-family: Arial,sans-serif;
+}
+
+.grey{
+  background-color: rgb(178, 178, 178);
+  border-left-color: rgb(155, 155, 155);
+  border-right-color: rgb(178, 178, 178);
+  border-bottom-color: rgb(178, 178, 178);
+
+}
+
+table tr.grey_light td {
+  background-color: rgb(230, 230, 230);
+  border-bottom-color: rgb(153, 153, 153);
+  border-left-color: rgb(153, 153, 153);
+  border-right-color: rgb(153, 153, 153);
+  border-top-color: rgb(230, 230, 230);
+
+
+}
+
+td {
+  width: 32px;
+}
+
+table, th, td {
+    border: 1px solid rgb(212, 212, 212);
+}
