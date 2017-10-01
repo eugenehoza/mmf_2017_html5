@@ -1,0 +1,39 @@
+body {
+  background-color: rgb(245, 246, 247);
+}
+
+.mainTable {
+  width: 379px;
+}
+
+.mainColors table {
+  width: 84px;
+  border-spacing: 0px;
+}
+
+#color1, #color2, td.editColor {
+  border: 1px solid transparent;
+}
+#color1:hover, #color2:hover, td.editColor:hover,  .colors td:not(.cn):hover {
+  border-color: #A4CEF9;
+  background-color: #E8EFF7;
+}
+
+#color1{
+  border-color: #62A2E4;
+  background-color: #C9E0F7;
+}
+
+.colors table {
+  width: 220px;
+  border-spacing: 2px;
+}
+.colors tr td {
+  display: table-cell;
+  padding: 1px;
+  border: 1px solid rgb(160,160,160);
+}
+.colors table tr td div {
+  width: 16px;
+  height: 16px;
+}
