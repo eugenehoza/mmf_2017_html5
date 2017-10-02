@@ -1,0 +1,55 @@
+div.div {
+       border-color: rgb(241, 241, 241);
+       border-style: solid;
+       border-width: 0 0 1px;
+       width: 159px;
+       padding: 0;
+     }
+     table.big_table {
+       border-spacing: 0;
+	   cellspacing: 0;
+       background-color: rgb(241, 241, 241);
+       width: 159px;
+       border-color: rgb(213, 213, 213);
+       border-style: solid;
+       border-width: 0 0 1px;
+       padding: 1px 1px 1px 4px;
+       font-family: Calibri;
+       font-size: 12px;
+	   letter-spacing: 0.5px;
+       color: black;
+       margin: 0;
+     }
+     td.line {
+       background-color: rgb(213, 213, 213);
+       border-color: rgb(241, 241, 241);
+       border-style: solid;
+       border-width: 2px 0 3px 1px;
+       width: 1px;
+       padding: 0;
+	   border-spacing: 0;
+     }
+     table.basic_table {
+	   border-width: 0;
+       padding: 0;
+       margin: 0;
+	   border-spacing: 0;
+	   border-collapse: collapse;
+     }
+     td.clipboard_td {
+       color: rgb(102, 102, 102);
+	   width: 139px;
+	   padding-bottom: 0px;
+	   padding-left: 41px;
+	   margin: 0;
+	   border-width: 0;
+     }
+	 tr.tr {
+	   padding: 0;
+	   bolder-width: 0;
+	 }
+	 td.right_bottom_td {
+	   border-width: 5px 0 0 0;
+	   padding: 3px;
+	   margin: 0;
+	 }
