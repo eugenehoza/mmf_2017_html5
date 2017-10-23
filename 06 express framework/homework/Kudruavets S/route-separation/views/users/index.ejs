@@ -1,0 +1,15 @@
+<% include ../header %>
+
+<h1><%= title %></h1>
+
+<div id="users">
+  <% users.forEach(function(user, index) { %>
+    <li>
+      <a href="/user/<%= index %>"><%= user.name %></a>
+      (<b>friends:</b> <% if(user.friends.length) {user.friends.forEach(function(friend,index,arr) { %><a href="/user/<%= friend.fId %>"><%= friend.fName %></a><%= (index === arr.length-1) ? '' : ', ' %><% })} else {  %>this user have no friends <% } %>)
+      <a href="/user/<%= index %>/edit">edit</a>
+    </li>
+  <% }) %>
+</div>
+
+<% include ../footer %>
