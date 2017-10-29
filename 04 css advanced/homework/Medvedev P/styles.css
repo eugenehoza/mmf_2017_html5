@@ -1,0 +1,66 @@
+body {
+  background-color: rgb(255, 255, 255);
+}
+
+table {
+  width: 212px;
+  height: 127px;
+}
+
+textarea {
+  background-color: rgb(254, 255, 224);
+  width: 200px;
+  border-color: rgb(0,122,71);
+  border-width: 1px;
+  height: 120px;
+  font-weight: bold;
+  font-size: 16px;
+  font-family: sans-serif;
+}
+
+div {
+  width: 6px;
+  height: 6px;
+  border-width: 1px;
+  border-color: rgb(126, 127, 126);
+  border-style: solid;
+  position: relative;
+}
+
+td.d1 div {
+  top: 4px;
+  left: 4px;
+}
+
+td.d2 div {
+  top: 4px;
+  left: 50%;
+}
+
+td.d3 div {
+  top: 4px;
+  left: -4px;
+}
+
+td.d8 div {
+  top: -8px;
+  left: -4px;
+}
+
+td.d7 div {
+  top: -8px;
+  left: 50%;
+}
+
+td.d6 div {
+  top: -8px;
+  left: 4px;
+}
+
+td.d5 div {
+  left: -4px;
+}
+
+td.d4 div {
+  left: 4px;
+}
