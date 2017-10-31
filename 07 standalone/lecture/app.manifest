@@ -1,0 +1,18 @@
+CACHE MANIFEST
+#1 Time: Thu Jun 15 2017 14:38:55 GMT+0300 (Беларусь (зима))
+
+
+CACHE:
+/index.html
+
+
+
+NETWORK:
+http://*
+https://*
+*
+
+
+FALLBACK:
+
+# hash: 2190f1ba50294f3aaa4ff3d0dea5826955414dedaf3dd4ba933c7c47d48510ee
