@@ -1,0 +1,11 @@
+CACHE MANIFEST
+# Версия 1.0
+
+CACHE:
+footer.ejs
+header.ejs
+index.ejs
+users/edit.ejs
+users/index.ejs
+users/view.ejs
+public/style.css
