@@ -99,6 +99,24 @@ app.get('/dropSchemaInFile', function (req, res) {
 	});
 })
 
+//Avdeychik E. - delete
+			app.get('/delete/:id', function (req, res){
+			    let id = req.params.id;
+			    let db = new sqlite3.Database(_dirname + '/test.db');
+			    let sql = `DELETE FROM users
+			            WHERE id=` + id;
+
+			    db.run(sql, (err) => {
+			        if (err) {
+                        return console.error(err.message);
+			        }
+			        else {
+                        console.log("user with id: \'" + id + "\' successfully deleted");
+			            res.send("ok");
+                    }
+			    })
+			})
+
 app.listen(3000);
 
 console.log("Running at Port 3000");
