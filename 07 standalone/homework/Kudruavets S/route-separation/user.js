@@ -44,7 +44,7 @@ exports.edit = function(req, res){
 };
 
 exports.update = function(req, res){
-	
+
   var user = req.body.user;
   req.user.name = user.name;
   req.user.email = user.email;
@@ -58,10 +58,10 @@ exports.update = function(req, res){
   {
 	  nFriends = user.newFriends;
   }
-  
+
   if(nFriends)
   {
-	
+
 	for(var i = 0; i < nFriends.length; i++)
 	{
 		for(var j = 0; j < users.length; j++)
@@ -73,6 +73,8 @@ exports.update = function(req, res){
 		}
 	}
   }
+
+  updateCache();
 
   res.redirect('/users');
 };
