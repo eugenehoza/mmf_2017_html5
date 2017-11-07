@@ -44,30 +44,36 @@ exports.edit = function(req, res){
 };
 
 exports.update = function(req, res){
-  // Normally you would handle all kinds of
-  // validation and save back to the db
+	
   var user = req.body.user;
   req.user.name = user.name;
   req.user.email = user.email;
 
-  var nFriends = user.newFriends;
+  var nFriends = [];
+  if(typeof(user.newFriends) === 'string')
+  {
+	  nFriends.push(user.newFriends);
+  }
+  else
+  {
+	  nFriends = user.newFriends;
+  }
+  
   if(nFriends)
   {
-    for(var i = 0; i < nFriends.length; i++)
-    {
-      for(var j = 0; j < users.length; j++)
-      {
-        if(users[j].name === nFriends[i])
-        {
-          req.user.friends.push({fName: users[j].name, fId: j.toString()});
-        }
-      }
-    }
+	
+	for(var i = 0; i < nFriends.length; i++)
+	{
+		for(var j = 0; j < users.length; j++)
+		{
+			console.log("1: " + typeof(users[j].name) + "; 2: " + typeof(nFriends[i]));
+			if(users[j].name === nFriends[i].toString())
+			{
+				req.user.friends.push({fName: users[j].name, fId: j.toString()});
+			}
+		}
+	}
   }
 
   res.redirect('/users');
-};
-
-exports.deleteFriend = function(req, res){
-  res.send('lol');
 };
