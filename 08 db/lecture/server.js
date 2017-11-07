@@ -82,6 +82,23 @@ app.get('/readFromTest', (req, res) => {
 
 });
 
+//Kudruavets S. - dropSchemaInFile
+app.get('/dropSchemaInFile', function (req, res) {
+	let db = new sqlite3.Database(__dirname + '/test.db');
+	   
+	let sql = `DROP TABLE users;`;
+	   
+	db.run(sql, (err) => {
+		if (err) {
+			return console.error(err.message);
+		}
+		else {
+			console.log("table \'users\' successfully deleted");
+			res.send("ok");
+		}
+	});
+})
+
 app.listen(3000);
 
 console.log("Running at Port 3000");
