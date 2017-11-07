@@ -102,7 +102,7 @@ app.get('/dropSchemaInFile', function (req, res) {
 //Avdeychik E. - delete
 			app.get('/delete/:id', function (req, res){
 			    let id = req.params.id;
-			    let db = new sqlite3.Database(_dirname + '/test.db');
+			    let db = new sqlite3.Database(__dirname + '/test.db');
 			    let sql = `DELETE FROM users
 			            WHERE id=` + id;
 
