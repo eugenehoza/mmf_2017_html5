@@ -1,0 +1,16 @@
+<html manifest="app.cache">
+<% include ../header %>
+
+<h1><%= title %></h1>
+
+<div id="users">
+  <% users.forEach(function(user, index) { %>
+    <li>
+      <a href="/user/<%= index %>"><%= user.name %></a>
+      City: <%= user.city %>
+      <a href="/user/<%= index %>/edit">edit</a>
+    </li>
+  <% }) %>
+</div>
+
+<% include ../footer %>
