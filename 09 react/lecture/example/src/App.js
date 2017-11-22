@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import { Menu, MenuItem} from 'react-foundation';
+import { Menu, MenuItem, Callout} from 'react-foundation';
 
 const Test = () => (
   <div>
@@ -34,14 +34,24 @@ const Nav = () => (
   </div>
 )
 
+
+//CallOut - Kudruavets
+const CallOut = () => (
+    <Callout>
+      <Header/>
+      <Nav/>
+    </Callout>
+)
+
 class App extends Component {
 
   render() {
     return (
       <Router>
         <div>
-          <Header/>
-          <Nav/>
+
+          <CallOut/>
+          
           <Route exact path="/" component={Home}/>
           <Route path="/test" component={Test}/>
         </div>
