@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Алгоритм Дейкстры</title>
+    <!--отступы, чтобы кнопки не примыкали друг к другу-->
+    <style>
+        input {
+            margin: 4px;
+        }
+    </style>
+</head>
+<body>
+    <!-- подключаем java script файл -->
+    <script src="al_deykstry.js"></script>
+    <form name="Graph1">
+        <!-- часть страницы для ввода числа узлов в графе-->
+        <table>
+            <tr>
+                <td><b>Количество узлов:</b></td>
+                <td>
+                    <input name="NumberOfNodes" size=3
+                           onfocus="this.select()">
+                </td>
+            </tr>
+        </table>
+        <!--кнопка, вызывающая функцию Create() js-файла -->
+        <!-- эту кнопку можно использовать также для сброса всех значений весов рёбер -->
+        <input type="button" value="Готово" onclick="Create();">
+        <!-- часть страницы для перечисления рёбер и ввода их весов -->
+        <p><b>Введите веса рёбер</b></p>
+        <p>(На консоли для удобства отображаются введённые вами связи)</p>
+        <table>
+            <tr>
+                <td><b>Первый узел:</b></td>
+                <td>
+                    <input name="Node1" size=3
+                           onfocus="this.select()">
+                </td>
+            </tr>
+            <tr>
+                <td><b>Вес ребра:</b></td>
+                <td>
+                    <input name="Mass" size=5
+                           onfocus="this.select()">
+                </td>
+            </tr>
+            <tr>
+                <td><b>Второй узел:</b></td>
+                <td>
+                    <input name="Node2" size=3
+                           onfocus="this.select()">
+                </td>
+            </tr>
+        </table>
+        <!--кнопка, вызывающая функцию Assign() js-файла -->
+        <input type="button" value="Готово" onclick="Assign();">
+        <!-- часть страницы для ввода начала и конца пути -->
+        <p><b>Требуется найти кратчайший путь</b></p>
+        <table>
+            <tr>
+                <td><b>От:</b></td>
+                <td>
+                    <input name="From" size=3
+                           onfocus="this.select()">
+                </td>
+                <td><b>узла</b></td>
+            </tr>
+            <tr>
+                <td><b>До:</b></td>
+                <td>
+                    <input name="To" size=3
+                           onfocus="this.select()">
+                </td>
+                <td><b>узла</b></td>
+            </tr>
+        </table>
+        <!--кнопка, вызывающая функцию FirstLast() js-файла -->
+        <input type="button" value="Готово" onclick="FirstLast();">
+        <!--кнопка, вызывающая функцию AlgorithmD() js-файла -->
+        <br><input type="button" value="Запуск" onclick="AlgorithmD();">
+    </form>
+</body>
+</html>
