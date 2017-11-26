@@ -1,0 +1,42 @@
+/*Селектор-класс*/
+.class1{
+  background: #FAF0E6;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+}
+#main{/*Селектор-id*/
+  font-family: "HELVETICA";
+  background-color: #FFFFF0;
+}
+h1{/*Селектор-тег*/
+  color: #D2691E;
+  font-style: IMPACT;
+  border: 6px double #8B4513;
+  padding:5px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+
+h3:first-letter {/*Селектор-первая буква*/
+  font-family: "Calibri";
+  color: #800000;
+  font-size: 50px;
+}
+
+th, td{/*Селектор-столбцы и строки*/
+  border-bottom: 1px solid #ddd;
+}
+
+tr:nth-child(even){/*Селектор-нечетный подтег*/
+  background-color: #E0FFFF;
+}
+body  b {/*Селектор-потомок*/
+  color: #FA8072;
+  text-decoration: underline;
+  font-style: oblique;
+}
+table > tr,td {/*Селектор-подтег и объединение*/
+  font-family: fantasy;
+}

@@ -82,12 +82,27 @@ app.get('/readFromTest', (req, res) => {
 
 });
 
-//Kudruavets S. - dropSchemaInFile
+  // Dovydenko M.
+app.get('/createSchemaInFile', function (req, res) {
+  let db = new sqlite3.Database(__dirname + '/test.db');
+
+  db.run('CREATE TABLE users(id number, name text, email text)', (err) => {
+    if (err) {
+      return console.error(err.message);
+    }
+    else {
+      console.log('"table \'users\' successfully created"');
+    }
+  });
+  res.send('ok');
+})
+
+  //Kudruavets S. - dropSchemaInFile
 app.get('/dropSchemaInFile', function (req, res) {
 	let db = new sqlite3.Database(__dirname + '/test.db');
-	   
+
 	let sql = `DROP TABLE users;`;
-	   
+
 	db.run(sql, (err) => {
 		if (err) {
 			return console.error(err.message);
@@ -99,23 +114,23 @@ app.get('/dropSchemaInFile', function (req, res) {
 	});
 })
 
-//Avdeychik E. - delete
-			app.get('/delete/:id', function (req, res){
-			    let id = req.params.id;
-			    let db = new sqlite3.Database(__dirname + '/test.db');
-			    let sql = `DELETE FROM users
-			            WHERE id=` + id;
+  //Avdeychik E. - delete
+app.get('/delete/:id', function (req, res){
+  let id = req.params.id;
+  let db = new sqlite3.Database(__dirname + '/test.db');
+  let sql = `DELETE FROM users
+             WHERE id=` + id;
 
-			    db.run(sql, (err) => {
-			        if (err) {
-                        return console.error(err.message);
-			        }
-			        else {
-                        console.log("user with id: \'" + id + "\' successfully deleted");
-			            res.send("ok");
-                    }
-			    })
-			})
+  db.run(sql, (err) => {
+    if (err) {
+      return console.error(err.message);
+    }
+    else {
+      console.log("user with id: \'" + id + "\' successfully deleted");
+      res.send("ok");
+    }
+  })
+})
 
 app.listen(3000);
 

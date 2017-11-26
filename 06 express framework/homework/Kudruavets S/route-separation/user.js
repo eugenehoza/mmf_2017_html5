@@ -66,7 +66,6 @@ exports.update = function(req, res){
 	{
 		for(var j = 0; j < users.length; j++)
 		{
-			console.log("1: " + typeof(users[j].name) + "; 2: " + typeof(nFriends[i]));
 			if(users[j].name === nFriends[i].toString())
 			{
 				req.user.friends.push({fName: users[j].name, fId: j.toString()});

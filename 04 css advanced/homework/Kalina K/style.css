@@ -1,0 +1,30 @@
+table {
+border-collapse: collapse;
+border:1px solid #e1e1e3;
+font-family: "Segoe UI", Arial, sans-serif;
+font-size: 9pt;
+color: #7a7477;
+}
+
+tbody tr:hover {
+background: #ebebeb;
+color: #7a7477;
+}
+
+.symbol{
+padding-top: 6px;
+padding-right: 10px;
+padding-left: 6px;
+text-align: center;
+}
+
+.description{
+padding-right: 40px;
+padding-bottom: 5px;
+padding-top: 4px;
+
+}
+
+.beginelement {
+border-top: 1px solid  #e1e1e3;
+}

@@ -1,0 +1,24 @@
+﻿В чем отличие let от const
+В чем отличие let от var
+Пример работы функции filter
+Пример работы функции map
+Пример работы функции some
+Пример работы функции reduce
+Пример работы функции every
+Пример записи аrrow тotation для функции
+Пример записи template string
+Пример новых циклов в ES6
+Описание типа Symbol
+Описание типа Map
+Описание типа Set
+Описание типа WeakMap
+Описание типа WeakSet
+Отличие типа Map от WeakMap
+Отличие типа Set от WeakSet
+Пример destructuring assignment
+Пример использования оператора ... при destructuring assignment
+Как задать default value для пременной в функции?
+Что такое TDZ?
+Пример работы фунциии copyWithin
+Пример работы фунциии fill
+Пример работы фунциии findIndex
