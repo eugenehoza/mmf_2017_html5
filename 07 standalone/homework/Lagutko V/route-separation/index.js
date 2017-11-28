@@ -19,7 +19,7 @@ module.exports = app;
 // Update cache
 global.updateCache = function() {
   cf = c.newCache(['../style.css']);
-
+}
 // Config
 
 app.set('view engine', 'ejs');
