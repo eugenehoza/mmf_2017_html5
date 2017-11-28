@@ -30,6 +30,7 @@ const Nav = () => (
     <Menu>
       <MenuItem><a href="/">Home</a></MenuItem>
       <MenuItem><a href="/test">Test</a></MenuItem>
+      <MenuItem><a href="/date">DateNow</a></MenuItem>
     </Menu>
   </div>
 )
@@ -50,14 +51,41 @@ class App extends Component {
       <Router>
         <div>
 
+
           <CallOut/>
-          
+
           <Route exact path="/" component={Home}/>
           <Route path="/test" component={Test}/>
+          <Route path="/date" component={DateNow}/>
         </div>
       </Router>
     );
   }
 }
+// Kalina - Date
+const DateNow = () => (
+  <div className='date'>
+    Date is: <DateN/>
+  </div>
+)
+export class DateN extends Component {
+    constructor() {
+        super();
 
+        var today = new Date(),
+            date =today.getDate() + "." + (today.getMonth() + 1) + "." + today.getFullYear();
+
+        this.state = {
+            date: date
+        };
+    }
+
+    render() {
+        return (
+            <div className='date'>
+                {this.state.date}
+            </div>
+        );
+    }
+}
 export default App;
