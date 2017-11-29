@@ -114,6 +114,22 @@ app.get('/dropSchemaInFile', function (req, res) {
 	});
 })
 
+//Dubrovnik A. - copy?id=:id
+app.get('/copy', function (req, res) {
+let db = new sqlite3.Database(__dirname + '/test.db');
+let sql = `insert into users (name, email) select name, email from users where id =` + req.param('id') + ";";
+
+db.run(sql, (err) => {
+  if (err) {
+    return console.error(err.message);
+  }
+  else {
+    console.log("user successfully copyed");
+    res.send("ok");
+  }
+});
+})
+
   //Avdeychik E. - delete
 app.get('/delete/:id', function (req, res){
   let id = req.params.id;
@@ -131,26 +147,6 @@ app.get('/delete/:id', function (req, res){
     }
   })
 })
-// Kalina - edit
-app.get('/edit', function (req, res) {
-
-  let id = req.query.id;
-  let name = req.query.name;
-  let email = req.query.email;
-  let db = new sqlite3.Database(__dirname + '/test.db');
-  let sql='UPDATE users SET name="'+ name + '", email="'+ email +'" WHERE id='+ id;
-  var data = [];
-  db.run(sql, (err) => {
-    if (err) {
-      return console.error(err.message);
-    }
-    else {
-      console.log("user data successfully updated");
-      res.send("user data successfully updated");
-    }
-  });
-
-});
 
 app.listen(3000);
 
