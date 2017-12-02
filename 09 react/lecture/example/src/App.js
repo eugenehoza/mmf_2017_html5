@@ -30,6 +30,7 @@ const Nav = () => (
     <Menu>
       <MenuItem><a href="/">Home</a></MenuItem>
       <MenuItem><a href="/test">Test</a></MenuItem>
+	  <MenuItem><a href="/picture">Picture</a></MenuItem>
       <MenuItem><a href="/date">DateNow</a></MenuItem>
     </Menu>
   </div>
@@ -42,6 +43,11 @@ const CallOut = () => (
       <Header/>
       <Nav/>
     </Callout>
+)
+
+//Picture - Chachkova
+const Picture = () => (
+	<center><img src='./picture.jpg' alt="котик"/></center>
 )
 
 class App extends Component {
@@ -57,6 +63,7 @@ class App extends Component {
           <Route exact path="/" component={Home}/>
           <Route path="/test" component={Test}/>
           <Route path="/date" component={DateNow}/>
+		  <Route path="/picture" component={Picture}/>
         </div>
       </Router>
     );

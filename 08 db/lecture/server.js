@@ -148,6 +148,27 @@ app.get('/delete/:id', function (req, res){
   })
 })
 
+//Chachkova K. /filter?name=:name
+app.get('/filter', function (req, res) {
+	let db = new sqlite3.Database(__dirname + '/test.db');
+
+	let sql = `SELECT * FROM users WHERE name LIKE "%` + req.query.name + `%";`;
+
+	var data = [];
+
+	db.each(sql, (err, row) => {
+		if (err) {
+			throw err;
+		}
+		console.log('Item '+JSON.stringify(row));
+		data.push(row)
+	}, () => {
+		db.close();
+		console.log('Data '+JSON.stringify(data));
+		res.send(data);
+	});
+})
+
 app.listen(3000);
 
 console.log("Running at Port 3000");
