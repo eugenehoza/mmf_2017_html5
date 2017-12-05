@@ -7,10 +7,19 @@
         input {
             margin: 4px;
         }
+        aside.imright {
+            float: right;
+        }
     </style>
 </head>
 <body>
-    <!-- подключаем java script файл -->
+    <aside>
+        <img src="examples_graphs.png" width="900" height="435" alt="изображение недоступно">
+    </aside>
+    <aside class="imright">
+        <img src="examples_data.png" width="500" height="360" alt="изображение недоступно">
+    </aside>   
+     <!-- подключаем java script файл -->
     <script src="al_deykstry.js"></script>
     <form name="Graph1">
         <!-- часть страницы для ввода числа узлов в графе-->
@@ -54,6 +63,12 @@
         </table>
         <!--кнопка, вызывающая функцию Assign() js-файла -->
         <input type="button" value="Готово" onclick="Assign();">
+        <p>
+            (Чтобы создать ребро между двумя узлами,<br>
+            введите номера этих узлов в поля <b>первый</b> и <b>второй узел</b>,<br>
+            а также введите <b>вес ребра</b> (т. е. его длину)<br>
+            в соответствующее поле)
+        </p>
         <!-- часть страницы для ввода начала и конца пути -->
         <p><b>Требуется найти кратчайший путь</b></p>
         <table>
@@ -79,5 +94,6 @@
         <!--кнопка, вызывающая функцию AlgorithmD() js-файла -->
         <br><input type="button" value="Запуск" onclick="AlgorithmD();">
     </form>
+    <img src="examples_answer.png" width="500" height="200" alt="изображение недоступно">
 </body>
 </html>
