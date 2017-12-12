@@ -169,6 +169,24 @@ app.get('/filter', function (req, res) {
 	});
 })
 
+//Boboed V. /add?id=:id&name=:name&email=:email
+app.get('/add', function (req, res) {
+	let db = new sqlite3.Database(__dirname + '/test.db');
+
+	let sql = `INSERT INTO users (id, name, email) VALUES (` + req.query.id + `, '` + req.query.name + `', '` + req.query.email + `');`;
+	
+	db.run(sql, (err) => {
+		if (err) {
+			return console.error(err.message);
+		}
+		else {
+			console.log("user successfully added");
+			res.send("user successfully added");
+		}
+	});
+	
+})
+
 app.listen(3000);
 
 console.log("Running at Port 3000");

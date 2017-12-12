@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+﻿import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
@@ -31,6 +31,7 @@ const Nav = () => (
       <MenuItem><a href="/">Home</a></MenuItem>
       <MenuItem><a href="/test">Test</a></MenuItem>
 	  <MenuItem><a href="/picture">Picture</a></MenuItem>
+<MenuItem><a href="/time">Time</a></MenuItem>
       <MenuItem><a href="/date">DateNow</a></MenuItem>
     </Menu>
   </div>
@@ -63,6 +64,7 @@ class App extends Component {
           <Route exact path="/" component={Home}/>
           <Route path="/test" component={Test}/>
           <Route path="/date" component={DateNow}/>
+<Route path="/time" component={Time}/>
 		  <Route path="/picture" component={Picture}/>
         </div>
       </Router>
@@ -95,4 +97,39 @@ export class DateN extends Component {
         );
     }
 }
+
+// Boboed V. - Time
+
+class Time extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {date: new Date()};
+  }
+
+  componentDidMount() {
+    this.timerID = setInterval(
+      () => this.tick(),
+      1000
+    );
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.timerID);
+  }
+
+  tick() {
+    this.setState({
+      date: new Date()
+    });
+  }
+
+  render() {
+    return (
+      <div>
+        <center><h2>It is {this.state.date.toLocaleTimeString()}.</h2></center>
+      </div>
+    );
+  }
+}
+
 export default App;

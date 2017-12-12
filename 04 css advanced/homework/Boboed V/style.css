@@ -1,0 +1,68 @@
+*{
+	margin:0px;
+}
+.list{
+	list-style: none;
+	background-color: #227345;
+	width: 240px;
+
+}
+
+li{
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	margin-right: 2px;
+}
+.list li{
+	background-image: url(sprite1.png);
+	
+}
+.list li:hover{
+	background-image: url(sprite2.png);
+	
+}
+.list li:first-child{
+	background-position: 0px 0px;
+	width: 60px;
+}
+.list li:first-child:hover{
+	/*background-position: 0px 0px;*/
+	width: 60px;
+}
+.list li:nth-child(2){
+	background-position: -60px 0px;
+	width:40px;
+
+}
+.list li:nth-child(3){
+	width: 22px;
+	background-position: -100px 0px;
+
+}
+.list li:nth-child(4){
+	background-position: -123px -1px;
+
+}
+.list li:nth-child(5){
+	background-position: -146px -2px;
+	width: 5px;
+
+}
+.list li:nth-child(6){
+	background-position: -156px -1px;
+
+}
+.list li:nth-child(7){
+	background-position: -143px -2px;
+	width: 10px;
+
+}
+.list li:nth-child(8){
+	background-position: -190px -2px;
+	width: 10px;
+
+}
+
+
+
