@@ -1,0 +1,44 @@
+p.one {
+    background-color: yellow;
+}
+
+#fig{
+	background-color: red;
+}
+
+
+p ~ ul {
+    background: green;
+}
+p ~ ul  li{
+    background: green;
+}
+a[target=_blank] {
+    background-color: yellow;
+}
+
+a:active { 
+    background-color: orange;
+}
+
+input:checked {
+    height: 50px;
+    width: 50px;
+
+}
+
+a:hover { 
+    background-color: aquamarine;
+}
+
+
+a:link { 
+    background-color: aqua;
+}
+
+p::first-line { 
+    background-color: pink;
+}
+:not(p) {
+    background: violet;
+}

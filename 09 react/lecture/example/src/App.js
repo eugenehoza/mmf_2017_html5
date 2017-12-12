@@ -31,7 +31,8 @@ const Nav = () => (
       <MenuItem><a href="/">Home</a></MenuItem>
       <MenuItem><a href="/test">Test</a></MenuItem>
 	  <MenuItem><a href="/picture">Picture</a></MenuItem>
-<MenuItem><a href="/time">Time</a></MenuItem>
+	  <MenuItem><a href="/time">Time</a></MenuItem>
+	  <MenuItem><a href="/sound">Sound</a></MenuItem>
       <MenuItem><a href="/date">DateNow</a></MenuItem>
     </Menu>
   </div>
@@ -51,6 +52,16 @@ const Picture = () => (
 	<center><img src='./picture.jpg' alt="котик"/></center>
 )
 
+//Sound - Radkevich
+const Sound = () => (
+	<center >
+		<p>Макс Корж - Небо поможет нам.</p>
+		<p><audio controls preload="false">
+			<source src="./sound.mp3" type="audio/mpeg" />
+		</audio></p>
+	</center>
+)
+
 class App extends Component {
 
   render() {
@@ -64,7 +75,8 @@ class App extends Component {
           <Route exact path="/" component={Home}/>
           <Route path="/test" component={Test}/>
           <Route path="/date" component={DateNow}/>
-<Route path="/time" component={Time}/>
+		  <Route path="/time" component={Time}/>
+		  <Route path="/sound" component={Sound}/>
 		  <Route path="/picture" component={Picture}/>
         </div>
       </Router>

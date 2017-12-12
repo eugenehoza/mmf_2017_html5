@@ -1,0 +1,31 @@
+{
+  "name": "route-separation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Settheworldonfireiii/mmfshit.git"
+  },
+  "keywords": [
+    "mfucker"
+  ],
+  "author": "jonnotsnow",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Settheworldonfireiii/mmfshit/issues"
+  },
+  "homepage": "https://github.com/Settheworldonfireiii/mmfshit#readme",
+  "dependencies": {
+    "appcache-node": "^0.2.0",
+    "cookie-parser": "^1.4.3",
+    "dureact": "^1.0.15",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "method-override": "^2.3.10",
+    "morgan": "^1.9.0"
+  }
+}

@@ -1,0 +1,31 @@
+table.buttons tr td {
+  background-color: #227447;
+  color: white;
+  height: 30;
+  text-align: center;
+  border-style: solid;
+  border-left-width: 1px;
+  border-right-width: 1px;
+  border-bottom-width: 0px;
+  border-top-width: 2px;
+  border-color: #227447;
+}
+
+table.buttons {
+  border-spacing: 0px;
+  background-color: #227447;
+}
+
+table.buttons tr td:hover {
+  background-color: white;
+  color: #227447;
+
+}
+
+table.buttons tr td.left:hover {
+  border-left-color: white;
+}
+
+table.buttons tr td.right:hover {
+  border-right-color: white;
+}

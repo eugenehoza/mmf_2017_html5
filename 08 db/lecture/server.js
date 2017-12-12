@@ -4,7 +4,30 @@ var path    = require("path");
 var sqlite3 = require('sqlite3').verbose();
 
 app.get('/', function (req, res) {
-  res.send('Hello World')
+	let db = new sqlite3.Database(__dirname + '/test.db');
+	let sql = `SELECT MAX(id) FROM users;`;
+	db.each(sql, (err, row) => {
+		if (err) {
+			throw err;
+		}
+		console.log('Item ' + JSON.stringify(row));
+		var buffer = '<p>Карточек в базе: ' + row["MAX(id)"] + '</p>';
+		
+		buffer += "<a href='/createSchemaInFile'>createSchemaInFile</a><br>";
+		buffer += "<a href='/dropSchemaInFile'>dropSchemaInFile</a><br>";
+		buffer += "<a href='/dropSchemaInFile'>dropSchemaInFile</a><br>";
+		buffer += "<a href='/copy/1'>copy 1</a><br>";
+		buffer += "<a href='/delete/1'>delete 1</a><br>";
+		buffer += "<a href='/filter?name=Evan'>filter Evan</a><br>";
+		
+		res.send(buffer);
+		
+	}, () => {
+		db.close();
+	});
+	
+
+
 })
 
 app.get('/number', function (req, res) {
