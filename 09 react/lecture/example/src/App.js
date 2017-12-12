@@ -34,6 +34,7 @@ const Nav = () => (
 	  <MenuItem><a href="/time">Time</a></MenuItem>
 	  <MenuItem><a href="/sound">Sound</a></MenuItem>
       <MenuItem><a href="/date">DateNow</a></MenuItem>
+	  <MenuItem><a href="/progressbar">ProgressBar</a></MenuItem>
     </Menu>
   </div>
 )
@@ -78,6 +79,7 @@ class App extends Component {
 		  <Route path="/time" component={Time}/>
 		  <Route path="/sound" component={Sound}/>
 		  <Route path="/picture" component={Picture}/>
+		  <Route path="/progressbar" component={ProgressBar}/>
         </div>
       </Router>
     );
@@ -142,6 +144,40 @@ class Time extends React.Component {
       </div>
     );
   }
+}
+
+//Lagutko - ProgressBar
+
+class ProgressBar extends React.Component { 
+	constructor(props) { 
+		super(props); 
+		this.state = {counter: 100}; 
+	} 
+
+	componentDidMount() { 
+		this.timerID = setInterval( 
+			() => this.tick(), 
+			1000 
+		); 
+	} 
+
+	componentWillUnmount() { 
+		clearInterval(this.timerID); 
+	} 
+
+	tick() { 
+		this.setState({ 
+			counter: this.state.counter - 10 
+		}); 
+	} 
+
+	render() { 
+		return ( 
+			<div> 
+				<Progress value = {this.state.counter}/> 
+			</div> 
+		); 
+	} 
 }
 
 export default App;
