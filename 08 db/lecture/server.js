@@ -12,20 +12,20 @@ app.get('/', function (req, res) {
 		}
 		console.log('Item ' + JSON.stringify(row));
 		var buffer = '<p>Карточек в базе: ' + row["MAX(id)"] + '</p>';
-		
+
 		buffer += "<a href='/createSchemaInFile'>createSchemaInFile</a><br>";
 		buffer += "<a href='/dropSchemaInFile'>dropSchemaInFile</a><br>";
 		buffer += "<a href='/dropSchemaInFile'>dropSchemaInFile</a><br>";
 		buffer += "<a href='/copy/1'>copy 1</a><br>";
 		buffer += "<a href='/delete/1'>delete 1</a><br>";
 		buffer += "<a href='/filter?name=Evan'>filter Evan</a><br>";
-		
+
 		res.send(buffer);
-		
+
 	}, () => {
 		db.close();
 	});
-	
+
 
 
 })
@@ -197,7 +197,7 @@ app.get('/add', function (req, res) {
 	let db = new sqlite3.Database(__dirname + '/test.db');
 
 	let sql = `INSERT INTO users (id, name, email) VALUES (` + req.query.id + `, '` + req.query.name + `', '` + req.query.email + `');`;
-	
+
 	db.run(sql, (err) => {
 		if (err) {
 			return console.error(err.message);
@@ -207,8 +207,28 @@ app.get('/add', function (req, res) {
 			res.send("user successfully added");
 		}
 	});
-	
+
 })
+// Kalina - edit
+app.get('/edit', function (req, res) {
+
+  let id = req.query.id;
+  let name = req.query.name;
+  let email = req.query.email;
+  let db = new sqlite3.Database(__dirname + '/test.db');
+  let sql='UPDATE users SET name="'+ name + '", email="'+ email +'" WHERE id='+ id;
+  var data = [];
+  db.run(sql, (err) => {
+    if (err) {
+      return console.error(err.message);
+    }
+    else {
+      console.log("user data successfully updated");
+      res.send("user data successfully updated");
+    }
+  });
+
+});
 
 app.listen(3000);
 
