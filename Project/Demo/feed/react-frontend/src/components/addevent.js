@@ -227,8 +227,6 @@ export default class Event extends React.Component {
           		</td>
         	</table>
         	<input class="button" type="submit" value="Добавить" />
-          <br/>
-          <input type="button" value="Задонатить" />
       	</form>
 		);
 	}
