@@ -4,8 +4,8 @@ var sqlite3 = require('sqlite3').verbose();
 function Event () { 
 	this.addEvent = function (event) { 
 		let db = new sqlite3.Database(__dirname + '/test.db');
-		let sql = `INSERT INTO users (name, date, time, place, user_id)
-					VALUES (` + event.name + `, ` + event.date + `, ` + event.time + `, ` + event.place + `, ` + event.userID + `)`;
+		let sql = `INSERT INTO users (name, date, time, description, userid)
+					VALUES (` + event.name + `, ` + event.date + `, ` + event.time + `, ` + event.description + `, ` + event.userID + `)`;
 
 		db.run(sql, (err) => {
 			if (err) {
