@@ -148,7 +148,7 @@ export default class Event extends React.Component {
       E = {name: this.state.value.name,
   		  description: this.state.value.description,
   		  data: this.state.value.day + "-" + this.state.value.month + "-" + this.state.value.year,
-  		  time: this.state.value.hours + ':' + this.state.value.minutes};
+  		  time: this.state.value.hours + '.' + this.state.value.minutes};
         alert('Событие добавлено \n'
 		      + E.name + '\n' 
   		    + E.description + '\n' 
