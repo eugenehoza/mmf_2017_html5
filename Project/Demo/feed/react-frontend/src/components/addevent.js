@@ -37,8 +37,7 @@ export default class Event extends React.Component {
     	month: this.state.value.month, 
     	year: this.state.value.year, 
     	hours: this.state.value.hours, 
-    	minutes: this.state.value.minutes,
-    	massage: "Событие добавлено"}});
+    	minutes: this.state.value.minutes,}});
   }
 
   descriptionChange(event) {
@@ -48,8 +47,7 @@ export default class Event extends React.Component {
     	month: this.state.value.month, 
     	year: this.state.value.year, 
     	hours: this.state.value.hours, 
-    	minutes: this.state.value.minutes,
-    	massage: "Событие добавлено"}});
+    	minutes: this.state.value.minutes,}});
   }
 
   dayChange(event) {
@@ -59,8 +57,7 @@ export default class Event extends React.Component {
     	month: this.state.value.month, 
     	year: this.state.value.year, 
     	hours: this.state.value.hours, 
-    	minutes: this.state.value.minutes,
-    	massage: "Событие добавлено"}});
+    	minutes: this.state.value.minutes,}});
   }
 
   monthChange(event) {
@@ -70,8 +67,7 @@ export default class Event extends React.Component {
     	month: event.target.value, 
     	year: this.state.value.year, 
     	hours: this.state.value.hours, 
-    	minutes: this.state.value.minutes,
-    	massage: "Событие добавлено"}});
+    	minutes: this.state.value.minutes,}});
   }
 
   yearChange(event) {
@@ -81,8 +77,7 @@ export default class Event extends React.Component {
     	month: this.state.value.month, 
     	year: event.target.value, 
     	hours: this.state.value.hours, 
-    	minutes: this.state.value.minutes,
-    	massage: "Событие добавлено"}});
+    	minutes: this.state.value.minutes,}});
   }
 
   hoursChange(event) {
@@ -92,8 +87,7 @@ export default class Event extends React.Component {
     	month: this.state.value.month, 
     	year: this.state.value.year,  
     	hours: event.target.value, 
-    	minutes: this.state.value.minutes,
-    	massage: "Событие добавлено"}});
+    	minutes: this.state.value.minutes,}});
   }
 
   minutesChange(event) {
@@ -103,8 +97,7 @@ export default class Event extends React.Component {
     	month: this.state.value.month, 
     	year: this.state.value.year,  
     	hours: this.state.value.hours, 
-    	minutes: event.target.value,
-    	massage: "Событие добавлено"}});
+    	minutes: event.target.value,}});
   }
 
   handleSubmit(event) {
